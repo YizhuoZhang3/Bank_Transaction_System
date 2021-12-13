@@ -1,0 +1,194 @@
+Account Number     Balance
+   1111000	   $0.0
+
+   1111001	   $188232.23
+
+   1111002	   $34.98
+
+   1111003	   $4235.93
+
+   1111004	   $3245.93
+
+   1111005	   $588.77
+
+   1111006	   $234.92
+
+   1111007	   $2384.24
+
+   1111008	   $1234.82
+
+   1111009	   $24.9
+
+Select one of the following: 
+W - Withdrawal
+D - Deposit
+N - New account
+B - Balance
+Q – Quit
+X – Delete Account
+
+You put L
+Error! Since this character is not in menu options!
+
+You put O
+Error! Since this character is not in menu options!
+
+You put V
+Error! Since this character is not in menu options!
+
+You put E
+Error! Since this character is not in menu options!
+
+Transaction Type: Withdrawal
+Account Number: 1111008
+Current Balance: $1234.82
+Amount to Withdraw: $1000.0
+New Balance: $234.82
+
+Transaction Type: Withdrawal
+Account Number: 1111002
+Current Balance: $34.98
+Amount to Withdraw: $500.0
+Error: Insufficient Funds Available
+
+Transaction Type: Withdrawal
+Account Number: 1111003
+Current Balance: $4235.93
+Amount to Withdraw: $-2381.0
+Invalid withdraw numbers!
+
+Transaction Type: Withdrawal
+Account Number: 1111007
+Current Balance: $2384.24
+Amount to Withdraw: $99999.0
+Error: Insufficient Funds Available
+
+Transaction Type: Withdrawal
+Error! Your account does not exist.
+
+Transaction Type: Deposit
+Account Number: 1111001
+Current Balance: $188232.23
+Amount to Deposit: $250000.5
+New Balance: $438232.73
+
+Transaction Type: Deposit
+Account Number: 1111005
+Current Balance: $588.77
+Amount to Deposit: $-1000.99
+Invalid deposit numbers!
+
+Transaction Type: Deposit
+Error! Your account does not exist.
+
+Transaction Type: Add New Account
+Error! Your account has already existed.
+Your transaction is done!
+
+Transaction Type: Add New Account
+New Account Number: 1111010
+New Account Balance: 0.0
+
+
+Transaction Type: Add New Account
+New Account Number: 1111011
+New Account Balance: 0.0
+
+
+Transaction Type: Add New Account
+New Account Number: 1111012
+New Account Balance: 0.0
+
+
+Transaction Type: Add New Account
+New Account Number: 1111013
+New Account Balance: 0.0
+
+
+Transaction Type: Deposit
+Account Number: 1111012
+Current Balance: $0.0
+Amount to Deposit: $999.0
+New Balance: $999.00
+
+Transaction Type: Deposit
+Account Number: 1111013
+Current Balance: $0.0
+Amount to Deposit: $100000.0
+New Balance: $100000.00
+
+Transaction Type: Withdrawal
+Account Number: 1111013
+Current Balance: $100000.0
+Amount to Withdraw: $1000.0
+New Balance: $99000.00
+
+Transaction Type: Withdrawal
+Account Number: 1111011
+Current Balance: $0.0
+Amount to Withdraw: $8.5
+Error: Insufficient Funds Available
+
+Transaction Type: Check Balance
+Account Number: 1111011
+Current Balance: $0.0
+
+Transaction Type: Check Balance
+Account Number: 1111013
+Current Balance: $99000.0
+
+Transaction Type: Check Balance
+Account Number: 1111006
+Current Balance: $234.92
+
+Transaction Type: Check Balance
+Account Number: 1111007
+Current Balance: $2384.24
+
+Transaction Type: Check Balance
+Error! Your account does not exist.
+
+Transaction: Delete Account
+You want to delete account 1111000
+You have deleted your account!
+
+Transaction: Delete Account
+Error! Your account has money, can't delete.
+Your transaction is done!
+
+Transaction: Delete Account
+Error! Your account does not exist.
+Your transaction is done!
+
+
+
+Account Number     Balance
+   1111001	   $438232.73
+
+   1111002	   $34.98
+
+   1111003	   $4235.93
+
+   1111004	   $3245.93
+
+   1111005	   $588.77
+
+   1111006	   $234.92
+
+   1111007	   $2384.24
+
+   1111008	   $234.81999999999994
+
+   1111009	   $24.9
+
+   1111010	   $0.0
+
+   1111011	   $0.0
+
+   1111012	   $999.0
+
+   1111013	   $99000.0
+
+
+
+Thanks for using AMT, goodbye!
