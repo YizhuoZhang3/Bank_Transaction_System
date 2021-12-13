@@ -1,5 +1,5 @@
 # Bank Transaction System
-## Bank Account Requirements
+## Requirements
 - You have been hired as a programmer by a major bank. Your first project is a small banking transaction system. Each account
 consists of a number and a balance. The user of the program (the teller) can create a new account, as well as perform deposits,
 withdrawals, and balance inquiries.
