@@ -1,8 +1,4 @@
-/* Yizhuo Zhang, HW7 - bank accounts, CISC1115
- * EC2
- */
-
-import java.io.*; 					//import java.io.* for File Input/Output
+import java.io.*; 				//import java.io.* for File Input/Output
 import java.util.Arrays;
 import java.util.Scanner;			//import Scanner class for print out in the console
 
@@ -11,16 +7,14 @@ public class HW7_test {
 
 	public static void main(String[] args) throws IOException {
 
-		final int maxAccts = 100;											//the bank is small, only can hold 100 accounts
+		final int maxAccts = 100;									//the bank is small, only can hold 100 accounts
 		boolean notDone = true;
-		int[] acctNum = new int[maxAccts];									//create the array of account number information
+		int[] acctNum = new int[maxAccts];								//create the array of account number information
 		double[] balance = new double[maxAccts];							//create the array of account balance 
-		char choice;														//selection character of menu
-		int numAccts;														//how many accounts in the account array from the initAccts file
+		char choice;											//selection character of menu
+		int numAccts;											//how many accounts in the account array from the initAccts file
 		int[] NewAcct= new int[maxAccts];										 
 		double[] NewBalance = new double[maxAccts];
-
-
 
 		//create an output file object using the PrintWriter class
 		PrintWriter outputFile = new PrintWriter("outputFile.txt");
@@ -34,7 +28,7 @@ public class HW7_test {
 			// print the account information array
 			printAccts(acctNum,balance,numAccts,outputFile);
 
-		}else {																//if the account has more than 100 in this bank, it will occur an error
+		}else {												//if the account has more than 100 in this bank, it will occur an error
 			outputFile.println("Error! Accounts are over bank limit!");
 		}
 
@@ -58,7 +52,7 @@ public class HW7_test {
 				notDone=false;
 				break;
 
-				//call withdraw method
+			//call withdraw method
 			case 'W':	
 			case 'w':
 
@@ -66,18 +60,18 @@ public class HW7_test {
 				outputFile.println();
 				break;
 
-				//call method of deposit
+			//call method of deposit
 			case 'D':
 			case 'd':
 				deposit(acctNum, balance,numAccts,inputFile,outputFile);
 				outputFile.println();
 				break;
 
-				//create new account 
+			//create new account 
 			case 'N':
 			case 'n':
 
-				int NewAcctNum = newAcct(acctNum, balance,numAccts,inputFile, outputFile);					  //add an account when call this method each time
+				int NewAcctNum = newAcct(acctNum, balance,numAccts,inputFile, outputFile);		//add an account when call this method each time
 				double Balance=inputFile.nextDouble();
 
 				NewAcct= new int[numAccts+1];														 		 //same array size with old array
@@ -108,14 +102,14 @@ public class HW7_test {
 				outputFile.println();
 				break;
 
-				//create balance method to check account balance
+			//create balance method to check account balance
 			case 'B':
 			case 'b':
 				balance(acctNum, balance,numAccts,inputFile,outputFile);
 				outputFile.println();
 				break;
 
-				//create method to delete account
+			//create method to delete account
 			case 'X':
 			case 'x':
 
@@ -200,10 +194,10 @@ public class HW7_test {
 		if(i==-1) {
 			output.println("Error! Your account does not exist.");	
 			return -1;
-		}else if(i!=-1 && balance[i]>0){											//if the account does exist, but it has money in it, can't be deleted
+		}else if(i!=-1 && balance[i]>0){										//if the account does exist, but it has money in it, can't be deleted
 			output.println("Error! Your account has money, can't delete.");
 			return -1;
-		}else {																		//if the account exist and the balance is zero, delete account
+		}else {														//if the account exist and the balance is zero, delete account
 			output.println("You want to delete account "+acctNum[i]);
 			return i;
 		}
@@ -263,7 +257,7 @@ public class HW7_test {
 		if(i==-1) {																				//when index is -1, the account does not exist
 			myout.println("Error! Your account does not exist.");
 		}else {										
-			myout.println("Account Number: " + acctNum[i]);										//print account balance information
+			myout.println("Account Number: " + acctNum[i]);								//print account balance information
 			myout.println("Current Balance: $" + balance[i]);
 		}
 	}
@@ -300,11 +294,11 @@ public class HW7_test {
 		if(i==-1) {																				//when index is -1, the account does not exist
 			myout.println("Error! Your account does not exist.");
 		}else {										
-			myout.println("Account Number: " + acctNum[i]);										//print account information
+			myout.println("Account Number: " + acctNum[i]);								//print account information
 			myout.println("Current Balance: $" + balance[i]);
 			myout.println("Amount to Deposit: $" + deposit);
-			if(deposit>=0) {																	//if withdraw amount is greater than the account balance, it will show error
-				NewBalance = balance[i]+deposit;												//new account balance will be calculated after withdraw
+			if(deposit>=0) {											//if withdraw amount is greater than the account balance, it will show error
+				NewBalance = balance[i]+deposit;								//new account balance will be calculated after withdraw
 				balance[i] = NewBalance;
 				myout.printf("New Balance: $%.2f", NewBalance);
 				myout.println();
@@ -347,11 +341,11 @@ public class HW7_test {
 		if(i==-1) {																				//when index is -1, the account does not exist
 			myout.println("Error! Your account does not exist.");
 		}else if(i!=-1){										
-			myout.println("Account Number: " + acctNum[i]);										//print account information
+			myout.println("Account Number: " + acctNum[i]);								//print account information
 			myout.println("Current Balance: $" + balance[i]);
 			myout.println("Amount to Withdraw: $" + withdraw);
-			if(withdraw>=0 && withdraw<=balance[i]) {											//if withdraw amount is greater than the account balance, it will show error
-				NewBalance = balance[i]-withdraw;												//new account balance will be calculated after withdraw
+			if(withdraw>=0 && withdraw<=balance[i]) {								//if withdraw amount is greater than the account balance, it will show error
+				NewBalance = balance[i]-withdraw;								//new account balance will be calculated after withdraw
 				balance[i] = NewBalance;
 				myout.printf("New Balance: $%.2f", NewBalance);
 				myout.println();
@@ -380,16 +374,16 @@ public class HW7_test {
 		//read account number from input file
 		int account=input.nextInt();
 
-		int i=0;															//set first index is 0
+		int i=0;										//set first index is 0
 
 		while(i<numAccts) {
-			if(acctNum[i]==account) {										//if the i-th element is account, then return the index i
+			if(acctNum[i]==account) {							//if the i-th element is account, then return the index i
 				return i;
 			}else {
 				i=i+1;
 			}
 		}
-		return -1;															//if there is no account match in array, index return to -1
+		return -1;										//if there is no account match in array, index return to -1
 	}
 
 
@@ -405,7 +399,7 @@ public class HW7_test {
 	public static int readAccts(int[] acctNum, double[] balance) throws IOException{
 
 		//local variable declarations
-		int x=0;															//count the array elements
+		int x=0;										//count the array elements
 
 		//input initial account file
 		File initAccts = new File("initAccts.txt");
